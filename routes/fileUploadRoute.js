@@ -38,7 +38,7 @@ route.get("/getFilesBySub", async(req,res)=>{
 route.post("/addFile", async(req,res)=>{
     try{
         const result = await fileUpload.create({
-            fileUrl:req.body.fileUrl,
+            fileURL:req.body.fileURL,
             fileTitle:req.body.fileTitle,
             uploaderName:req.body.uploaderName,
             uploaderMail:req.body.uploaderMail,
