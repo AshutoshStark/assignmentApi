@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const imageView = new mongoose.Schema({
     teacherName:{
-        type:Number,
+        type:String,
         required:true,
     },
     teacherMail:{
