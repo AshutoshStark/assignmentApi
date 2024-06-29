@@ -13,6 +13,19 @@ route.get("/getTeacher",async(req,res)=>{
         res.status(500).json({message:error.message,success:false});
     }
 });
+route.get("/getTeacherById",async(req,res)=>{
+
+    const userId = req.query.userId
+
+    try{
+        const result = await teacherView.findOne({
+            teacherMail:userId,
+        });
+        res.status(200).json({imageViews:result,success:true});
+    }catch(error){
+        res.status(500).json({message:error.message,success:false});
+    }
+});
 
 //this route will find specific subject mentor
 
