@@ -60,7 +60,7 @@ route.post("/addFile", async(req,res)=>{
 route.put("/check",async(req,res)=>{
 
     const Id = req.query.Id;
-
+    
     try{    
         await fileUpload.updateOne({_id:Id,},{
                 marks:req.body.marks,
