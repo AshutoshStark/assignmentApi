@@ -59,10 +59,10 @@ route.post("/addFile", async(req,res)=>{
 
 route.put("/check",async(req,res)=>{
 
-    const file_id = req.query.file_id;
+    const Id = req.query.Id;
 
     try{    
-        await fileUpload.updateOne({_id:file_id,},{
+        await fileUpload.updateOne({_id:Id,},{
                 marks:req.body.marks,
                 checked:req.body.checked,
             })
