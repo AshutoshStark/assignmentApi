@@ -62,10 +62,9 @@ route.put("/check",async(req,res)=>{
     const file_id = req.query.file_id;
 
     try{    
-        await fileUpload.updateOne({_id:file_id,},
-            {
+        await fileUpload.updateOne({_id:file_id,},{
                 marks:req.body.marks,
-                checked:true,
+                checked:req.body.checked,
             })
         res.status(200).json({success:true});
     }catch(error){
