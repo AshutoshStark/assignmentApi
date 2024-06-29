@@ -51,7 +51,7 @@ route.put('/addpoints',async(req,res)=>{
         const teacherId = req.query.teacherId;
 
         const result = teacherView.updateOne({teacherMail:teacherId,},{
-            points:points.req.points,
+            points:req.body.points,
         })
         res.status(200).json({success:true})
     }catch(error){
