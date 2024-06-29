@@ -23,7 +23,7 @@ const assignmentUpload = new mongoose.Schema({
         required:true,
     },
     marks:{
-        type:Number,
+        type:String,
         required:false,
     },
     checked:{
